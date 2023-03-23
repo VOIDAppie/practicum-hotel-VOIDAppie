@@ -61,7 +61,7 @@ public class HotelOverzichtController {
 
         for(Boeking perBoeking: hotel.getBoekingen()) {
             if(overzichtDatePicker.getValue().plusDays(1).isAfter(perBoeking.getAankomstDatum()) && overzichtDatePicker.getValue().minusDays(1).isBefore(perBoeking.getVertrekDatum())) {
-                boekingen.add(String.format("klantnaam %s kamernummer %s aankomstdatum %s vertrekdatum %s", perBoeking.getBoeker(), perBoeking.getKamer(), perBoeking.getAankomstDatum(), perBoeking.getVertrekDatum()));
+                boekingen.add(String.format("klantnaam: %s kamernummer %s aankomstdatum: %s vertrekdatum: %s", perBoeking.getBoeker().getNaam(), perBoeking.getKamer(), perBoeking.getAankomstDatum(), perBoeking.getVertrekDatum()));
 
             }
         }
